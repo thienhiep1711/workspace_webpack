@@ -24,6 +24,7 @@ const bootstrapConfig = isProd ? bootstrapEntryPoints.prod : bootstrapEntryPoint
 module.exports = {
     entry: {
         about: "./src/components/about",
+        home: "./src/components/home/home",
         contact: "./src/components/contact",
         app: "./src/components/app",
         vendor: ["react", "react-dom"],
@@ -37,22 +38,12 @@ module.exports = {
 
     module: {
         rules: [{
-                test:['/\.js$/'],
-                 exclude: /(node_modules)/,
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules)/,
                 use: [{
                     loader: 'babel-loader',
                     options: {
-                         presets:[ 'es2015','react']
-                    }
-                }]
-            },
-           {
-                test:['/\.jsx?$/'],
-                 exclude: (/node_modules/),
-                use: [{
-                    loader: 'babel',
-                    options: {
-                        presets:[ 'es2015','react']
+                        presets: ['es2015', 'react']
                     }
                 }]
             },
@@ -101,21 +92,28 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Webpack Demo',
             hash: true,
-            excludeChunks: ['contact', 'about'],
+            excludeChunks: ['contact', 'about', 'home'],
             filename: 'index.html',
             template: './src/index.html'
         }),
         new HtmlWebpackPlugin({
+            title: 'Home',
+            hash: true,
+            excludeChunks: ['contact', 'about' ,'app'],
+            filename: 'home.html',
+            template: './src/home.html'
+        }),
+        new HtmlWebpackPlugin({
             title: 'About Page',
             hash: true,
-            excludeChunks: ['contact', 'app'],
+            excludeChunks: ['contact', 'app','home'],
             filename: 'about.html',
             template: './src/about.html'
         }),
         new HtmlWebpackPlugin({
             title: 'Contact Page',
             hash: true,
-            excludeChunks: ['app', 'about'],
+            excludeChunks: ['app', 'about','home'],
             filename: 'contact.html',
             template: './src/contact.html'
         }),

@@ -555,12 +555,12 @@ module.exports = function (css) {
 /***/ }),
 
 /***/ "./src/components/about.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_about_scss__ = __webpack_require__("./src/scss/about.scss");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_about_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scss_about_scss__);
+
+
+__webpack_require__("./src/scss/about.scss");
 
 document.write("About");
 
