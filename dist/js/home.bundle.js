@@ -1,6 +1,6 @@
-webpackJsonp([4],{
+webpackJsonp([3],{
 
-/***/ "./src/components/app.js":
+/***/ "./src/components/home/home.js":
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42,4 +42,4 @@ ReactDOM.render(React.createElement(HelloMessage, { name: "John" }), document.ge
 
 /***/ })
 
-},["./src/components/app.js"]);
+},["./src/components/home/home.js"]);
