@@ -1,4 +1,6 @@
+@import '../bootstrap/customizations.scss';
+
 .main {
-    background-color:green;
+    background-color:$brand-success;
     color: #fff;
 }
