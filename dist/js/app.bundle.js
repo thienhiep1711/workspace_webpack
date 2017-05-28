@@ -14,6 +14,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var React = __webpack_require__("./node_modules/react/react.js");
+var ReactDOM = __webpack_require__("./node_modules/react-dom/index.js");
+
 var HelloMessage = function (_React$Component) {
   _inherits(HelloMessage, _React$Component);
 
@@ -24,12 +27,12 @@ var HelloMessage = function (_React$Component) {
   }
 
   _createClass(HelloMessage, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return React.createElement(
-        "div",
+        'div',
         null,
-        "Hello ",
+        'Hello ',
         this.props.name
       );
     }
@@ -38,7 +41,7 @@ var HelloMessage = function (_React$Component) {
   return HelloMessage;
 }(React.Component);
 
-ReactDOM.render(React.createElement(HelloMessage, { name: "John" }), document.getElementById('react-container'));
+ReactDOM.render(React.createElement(HelloMessage, { name: 'John' }), document.getElementById('react-container'));
 
 /***/ })
 
